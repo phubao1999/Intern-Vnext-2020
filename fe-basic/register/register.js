@@ -5,7 +5,7 @@ const regex_phone = '^[0-9]*$';
 registerButton.addEventListener('click', () => {
     checkValidate();
     if (checkValidate()) {
-        console.log('aaa');
+        window.location.href = `/register/verify/verify.html`;
     }
 });
 
