@@ -142,4 +142,9 @@ body {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
+
+.err {
+  font-size: 14px;
+  color: red;
+}
 /*# sourceMappingURL=register.css.map */
