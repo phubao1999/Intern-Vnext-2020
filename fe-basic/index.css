@@ -21,11 +21,26 @@
   height: 100vh;
 }
 
+@media (max-width: 600px) {
+  .all {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .all .left {
   width: 50%;
   height: 100vh;
   background-image: url(./asset/image/mak-PXqOb63OLg4-unsplash.jpg);
   background-size: cover;
+}
+
+@media (max-width: 600px) {
+  .all .left {
+    width: 100%;
+  }
 }
 
 .all .right {
@@ -43,6 +58,12 @@
   background-color: #e0e0e0;
 }
 
+@media (max-width: 600px) {
+  .all .right {
+    width: 100%;
+  }
+}
+
 .login-form {
   width: 55%;
   height: auto;
@@ -51,6 +72,12 @@
   background-color: #dcdcdc;
   -webkit-box-shadow: 3px 3px 10px #777;
           box-shadow: 3px 3px 10px #777;
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    width: 80%;
+  }
 }
 
 .login-form__hdg {

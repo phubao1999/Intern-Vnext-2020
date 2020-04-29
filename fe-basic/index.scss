@@ -1,3 +1,4 @@
+@import './asset/scss/responsive.scss';
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 
 * {
@@ -13,12 +14,18 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
+    @include small () {
+        flex-direction: column;
+    }
 
     .left {
         width: 50%;
         height: 100vh;
         background-image: url(./asset/image/mak-PXqOb63OLg4-unsplash.jpg);
         background-size: cover;
+        @include small () {
+            width: 100%;
+        }
     }
 
     .right {
@@ -28,6 +35,9 @@
         justify-content: center;
         height: 100vh;
         background-color: #e0e0e0;
+        @include small () {
+            width: 100%;
+        }
     }
 }
 
@@ -38,6 +48,9 @@
     display: block;
     background-color: #dcdcdc;
     box-shadow: 3px 3px 10px #777;
+    @include small () {
+        width: 80%;
+    }
 
     &__hdg {
         display: block;
