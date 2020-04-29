@@ -250,8 +250,15 @@ const addValue = json => {
 
 $(document).ready(function () {
     $("#table").scroll(function () {
-        const dom = $('.d-none');
-        dom.removeClass('d-none');
+        const data = document.querySelectorAll('.d-none');
+        const table = document.getElementById('table');
+        if (table.scrollTop + table.offsetHeight === table.scrollHeight) {
+            data.forEach(i => {
+                setTimeout(() => {
+                    i.classList.remove('d-none');
+                }, 1000)
+            })
+        }
     });
     $('.info').click(function () {
         console.log('aaa');

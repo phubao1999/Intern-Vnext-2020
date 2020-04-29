@@ -7,7 +7,7 @@ for (let i = 0; i < input.length; i++) {
         if (e.target.value !== '') {
             if (i === input.length - 1) {
                 arr.push(e.target.value);
-                dom.focus();
+                input[0].focus();
             } else {
                 input[++i].focus();
                 arr.push(e.target.value);
