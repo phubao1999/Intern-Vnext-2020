@@ -9,23 +9,28 @@
 </head>
 
 <body>
-    <form class="login-form">
-        <h2 class="login-form__hdg">Login</h2>
-        <div class="login-form__field">
-            <div class="input-group">
-                <input class="input-group__input" id="id" type="text" placeholder=" " autocomplete="off">
-                <label class="input-group__label" for="id">Id</label>
-            </div>
-            <div class="input-group">
-                <input class="input-group__input" id="password" type="password" placeholder=" " autocomplete="off">
-                <label class="input-group__label" for="password">Password</label>
-            </div>
+    <div class="all">
+        <div class="left"></div>
+        <div class="right">
+            <form class="login-form">
+                <h2 class="login-form__hdg">Login</h2>
+                <div class="login-form__field">
+                    <div class="input-group">
+                        <input class="input-group__input" id="id" type="text" placeholder=" " autocomplete="off">
+                        <label class="input-group__label" for="id">Id</label>
+                    </div>
+                    <div class="input-group">
+                        <input class="input-group__input" id="password" type="password" placeholder=" " autocomplete="off">
+                        <label class="input-group__label" for="password">Password</label>
+                    </div>
+                </div>
+                <button class="login-btn" type="button" id="btn-login">Login</button>
+                <div class="w-100">
+                    <a href="./register/register.html" class="to-register">Go To Register</a>
+                </div>
+            </form>
         </div>
-        <button class="login-btn" type="button" id="btn-login">Login</button>
-        <div class="w-100">
-            <a href="./register/register.html" class="to-register">Go To Register</a>
-        </div>
-    </form>
+    </div>
     <script src="./index.js"></script>
 </body>
 </html>

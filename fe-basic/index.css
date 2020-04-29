@@ -1,33 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
-body {
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
+.all {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(./asset/image/smiling-beautiful-young-woman-pointing-copyspace_171337-11420.jpg);
-  background-size: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.all .left {
+  width: 50%;
+  height: 100vh;
+  background-image: url(./asset/image/mak-PXqOb63OLg4-unsplash.jpg);
+  background-size: cover;
+}
+
+.all .right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  background-color: #e0e0e0;
 }
 
 .login-form {
-  width: 330px;
+  width: 55%;
   height: auto;
   padding: 32px;
   display: block;
-  background-color: #34495e;
-  border-radius: 13px;
+  background-color: #dcdcdc;
   -webkit-box-shadow: 3px 3px 10px #777;
           box-shadow: 3px 3px 10px #777;
 }
@@ -40,7 +61,7 @@ body {
   margin: 0 auto;
   margin-bottom: 32px;
   font-size: 28px;
-  color: #fff;
+  color: #424242;
   letter-spacing: 0.05em;
 }
 
@@ -67,12 +88,12 @@ body {
   background-color: transparent;
   font-size: 18px;
   letter-spacing: 0.1em;
-  color: #fff;
+  color: #424242;
   padding: 8px 4px;
   outline: none;
   border: none;
   border-radius: 0px;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #424242;
   /* Floating animation */
 }
 
@@ -85,7 +106,7 @@ body {
 }
 
 .input-group__input:placeholder-shown ~ .input-group__label {
-  color: #fff;
+  color: #424242;
 }
 
 .input-group__input:focus ~ .input-group__label,
@@ -115,12 +136,12 @@ body {
   appearance: none;
   font-size: 20px;
   letter-spacing: 0.05em;
-  color: #fff;
+  color: #424242;
   width: 100%;
   padding: 8px;
   border-radius: 30px;
   background-color: transparent;
-  border: solid 2px #fff;
+  border: solid 2px #424242;
   outline: none;
   cursor: pointer;
   -webkit-user-select: none;
@@ -132,8 +153,10 @@ body {
 }
 
 .login-btn:hover {
-  color: #2ecc71;
-  border: 2px solid #2ecc71;
+  color: #ffffff;
+  /* border: 2px solid #ffffff; */
+  background: #656565;
+  border: none;
 }
 
 .login-btn:active {
@@ -155,6 +178,6 @@ body {
 
 .w-100 a {
   margin-top: 1rem;
-  color: #fff;
+  color: #424242;
 }
 /*# sourceMappingURL=index.css.map */
