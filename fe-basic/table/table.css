@@ -12,6 +12,26 @@ table {
   display: block;
 }
 
+table::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+table::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+table::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #555;
+}
+
+thead tr {
+  background-color: #4355a0 !important;
+  color: #fff;
+}
+
 tbody {
   height: 100%;
   width: 100%;
@@ -23,6 +43,7 @@ th {
   text-align: left;
   padding: 8px;
   height: 4rem;
+  width: 10rem;
 }
 
 tr:nth-child(odd) {
@@ -30,16 +51,17 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(odd):hover {
-  background-color: #dddddd;
+  background-color: #efe4e4;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #efe4e4;
 }
 
 .all {
   display: table-row;
-  border: 1.5px solid;
+  -webkit-box-shadow: 5px 15px 19px 3px;
+          box-shadow: 5px 15px 19px 3px;
 }
 
 .d-none {
@@ -57,6 +79,5 @@ tr:nth-child(even) {
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
-  background-color: #95a5a6;
 }
 /*# sourceMappingURL=table.css.map */
