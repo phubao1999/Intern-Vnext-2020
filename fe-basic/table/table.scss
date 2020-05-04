@@ -10,6 +10,7 @@ table {
     height: 300px;
     overflow: auto;
     display: block;
+    overflow-x: hidden;
 
     &::-webkit-scrollbar {
         width: 12px;
