@@ -141,14 +141,6 @@ const data = [
     }
 ];
 
-const addValue = json => {
-    const arr = [];
-    for (let i in json) {
-        arr.push(json[i]);
-    }
-    return arr;
-}
-
 // $(document).ready(function () {
 //     $("#table").scroll(function () {
 //         const data = document.querySelectorAll('.d-none');
@@ -167,12 +159,14 @@ const addValue = json => {
 // });
 
 const convertDate = (date, option) => {
+    if (date === '') {
+        return '';
+    }
     const timeStamp = Date.parse(date);
     const a = new Date(timeStamp);
     if (option === 0) {
         const year = a.getFullYear();
         const month = a.getMonth() + 1;
-        const day = a.getDay();
         return `${year}/${month}`;
     } else {
         const hh = a.getHours();
@@ -213,9 +207,25 @@ const renderTable = data => {
     })
 }
 
+const uniqueSet = arr => {
+    const uni = new Set(arr);
+    const backToArr = [...uni];
+    return backToArr;
+}
+
 const changeTable = () => {
     return new Promise(() => {
-        console.log('Step 2');
+        const dom = document.getElementsByClassName('month');
+        const arr = [];
+        for (let i = 0; i < dom.length; i++) {
+            arr.push(dom[i]);
+        }
+        for (let i = 0; i < arr.length - 1; i++) {
+            // console.log(arr[i]);
+            if (arr[i].innerHTML === arr[i + 1].innerHTML) {
+                arr[i].innerHTML = '';
+            }
+        }
     });
 }
 
