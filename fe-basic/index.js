@@ -15,25 +15,27 @@ const respone = {
 }
 
 const setupFb = () => {
-    window.fbAsyncInit = function () {
-        FB.init({
-            appId: '272554133782678',
-            cookie: true,
-            xfbml: true,
-            version: 'v7.0'
-        });
+    return new Promise(() => {
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '272554133782678',
+                cookie: true,
+                xfbml: true,
+                version: 'v7.0'
+            });
 
-        FB.AppEvents.logPageView();
+            FB.AppEvents.logPageView();
 
-    };
+        };
 
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) { return; }
-        js = d.createElement(s); js.id = id;
-        js.src = "https://connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    })
 }
 
 const submitLogin = () => {
@@ -48,7 +50,6 @@ const submitLogin = () => {
                 name = response.name;
                 id = response.id;
             });
-
         } else {
             console.log("User login failed");
         }
@@ -63,9 +64,18 @@ const eventLogin = () => {
     })
 }
 
-const initFunc = () => {
-    eventLogin();
-    setupFb();
+const checkLogin = () => {
+    return new Promise(() => {
+        window.FB.getLoginStatus((response) => {
+            statusChangeCallback(response);
+        });
+    });
+}
+
+const initFunc = async () => {
+    await setupFb()
+        .then(eventLogin());
+    await checkLogin()
 }
 
 initFunc();
