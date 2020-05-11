@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id"
+        content="210112520970-qve2ltqc095e7asdmltpeplnimsd8s7l.apps.googleusercontent.com">
     <link rel="stylesheet" href="/index.css">
     <title>Document</title>
 </head>
@@ -33,12 +35,24 @@
                     </button>
                 </div>
                 <div class="w-100">
+                    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                </div>
+                <div class="w-100">
                     <a href="./register/register.html" class="to-register">Go To Register</a>
                 </div>
             </form>
         </div>
     </div>
-    <script src="./index.js"></script>
+    <script src="./index.js" async></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async>
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+    </script>
 </body>
 
 </html>
